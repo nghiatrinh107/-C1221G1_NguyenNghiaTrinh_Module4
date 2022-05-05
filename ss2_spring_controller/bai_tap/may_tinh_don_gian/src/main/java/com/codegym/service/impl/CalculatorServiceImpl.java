@@ -7,20 +7,27 @@ import org.springframework.stereotype.Service;
 public class CalculatorServiceImpl implements ICalculatorService {
 
     @Override
-    public int calculator(int a, int b, String c) {
+    public String calculator(int a, int b, String c) {
         int result = 0;
         switch (c){
             case "addition":
-                return result = a+b;
+                result = a+b;
+                return Integer.toString(result);
             case "subtraction":
-                return result = a-b;
+                result = a-b;
+                return Integer.toString(result);
             case "multiplication":
-                return result = a*b;
+                result = a*b;
+                return Integer.toString(result);
             case "division":
-                return result = a/b;
+                if(b != 0){
+                    result = a/b;
+                    return Integer.toString(result);
+                }else {
+                    return "Ko đc mẫu bằng 0";
+                }
             default:
-                break;
+                return "Sai rồi đó";
         }
-        return result;
     }
 }
