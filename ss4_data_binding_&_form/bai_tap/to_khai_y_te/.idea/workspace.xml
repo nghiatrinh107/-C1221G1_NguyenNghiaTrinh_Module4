@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6dcd1898-d430-44f0-8bce-77185788a8d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/classes/java/main/com/codegym/controller/SongController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/classes/java/main/com/codegym/model/Song.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/classes/java/main/com/codegym/repository/ISongRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/classes/java/main/com/codegym/repository/impl/SongRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/classes/java/main/com/codegym/service/ISongService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/classes/java/main/com/codegym/service/impl/SongServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/libs/bai_hat-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/java/com/codegym/controller/SongController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/java/com/codegym/model/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/java/com/codegym/repository/ISongRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/java/com/codegym/repository/impl/SongRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/java/com/codegym/service/ISongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/java/com/codegym/service/impl/SongServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_hat/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/build/classes/java/main/com/codegym/controller/SettingEmailController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/build/classes/java/main/com/codegym/model/Email.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/build/libs/hom_thu_dien_tu-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/java/com/codegym/controller/SettingEmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/java/com/codegym/model/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/webapp/WEB-INF/views/setting.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hom_thu_dien_tu/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/ToKhaiYTe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IToKhaiYTeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/impl/ToKhaiYTeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/IToKhaiYTeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/ToKhaiYServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/java/com/codegym/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/java/com/codegym/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/data_binding_&amp;_form/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/java/com/codegym/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/java/com/codegym/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/java/com/codegym/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/java/com/codegym/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/java/com/codegym/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/spring-user-model/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="28jr6xepsLhoFoMQAIN7y08u3p1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\godegym\module4\ss4_data_binding_&amp;_form\bai_tap\to_khai_y_te\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6dcd1898-d430-44f0-8bce-77185788a8d6" name="Default Changelist" comment="" />
+      <created>1651740664073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651740664073</updated>
+      <workItem from="1651740669956" duration="2279000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="415" y="77" key="#com.intellij.ide.util.MemberChooser" timestamp="1651742346299">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="415" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1218.720@0.0.1218.720" timestamp="1651742346299" />
+  </component>
+</project>
