@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6dcd1898-d430-44f0-8bce-77185788a8d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/src/main/java/com/codegym/service/ICalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/src/main/java/com/codegym/service/ICalculatorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/src/main/java/com/codegym/service/impl/CalculatorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/src/main/java/com/codegym/service/impl/CalculatorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -169,7 +167,8 @@
       <updated>1651740664073</updated>
       <workItem from="1651740669956" duration="3079000" />
       <workItem from="1651749563919" duration="3479000" />
-      <workItem from="1651760465022" duration="944000" />
+      <workItem from="1651760465022" duration="1208000" />
+      <workItem from="1651807798056" duration="22000" />
     </task>
     <servers />
   </component>
