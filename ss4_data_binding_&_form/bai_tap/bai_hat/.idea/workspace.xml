@@ -20,42 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2da2b32c-271c-4e68-bece-711fa3b80ba3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/classes/java/main/com/codegym/controller/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/classes/java/main/com/codegym/model/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/classes/java/main/com/codegym/repository/IProductRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/classes/java/main/com/codegym/repository/impl/ProductRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/classes/java/main/com/codegym/service/IProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/classes/java/main/com/codegym/service/impl/ProductServiceImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/build/libs/bai_tap-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/repository/impl/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/java/com/codegym/service/impl/ProductServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/bai_tap/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/bai_tap/may_tinh_don_gian/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss3_thymeleaf/thuc_hanh/spring-customer-management-thymleaf-main/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../to_khai_y_te/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../to_khai_y_te/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss3_thymeleaf/thuc_hanh/spring-customer-management-thymleaf-main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -215,6 +181,7 @@
       <workItem from="1651810828701" duration="1053000" />
       <workItem from="1651813240951" duration="3000" />
       <workItem from="1651821703610" duration="1426000" />
+      <workItem from="1651888365702" duration="553000" />
     </task>
     <servers />
   </component>
@@ -245,10 +212,10 @@
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="415" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1218.720@0.0.1218.720" timestamp="1651739512064" />
-    <state x="390" y="116" key="FileChooserDialogImpl" timestamp="1651749559844">
+    <state x="390" y="116" key="FileChooserDialogImpl" timestamp="1651888922011">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="390" y="116" key="FileChooserDialogImpl/0.0.1218.720@0.0.1218.720" timestamp="1651749559844" />
+    <state x="390" y="116" key="FileChooserDialogImpl/0.0.1218.720@0.0.1218.720" timestamp="1651888922011" />
     <state width="801" height="318" key="GridCell.Tab.0.bottom" timestamp="1651746142108">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
