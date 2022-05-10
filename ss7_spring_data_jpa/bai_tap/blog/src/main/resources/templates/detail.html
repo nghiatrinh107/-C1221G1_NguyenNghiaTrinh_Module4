@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Name:
+    <th:block th:text="${blog.name}"></th:block>
+</h1>
+<h3>
+    Author
+    <th:block th:text="${blog.author}"></th:block>
+</h3>
+<p>
+
+    <th:block th:text="${blog.content}"></th:block>
+</p>
+<button type="button" class="btn btn-primary"><a href="/list" style="color: white">Back to List</a></button>
+</body>
+</html>
