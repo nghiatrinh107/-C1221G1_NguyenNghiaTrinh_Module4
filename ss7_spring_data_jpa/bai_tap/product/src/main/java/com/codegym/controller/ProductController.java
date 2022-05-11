@@ -1,8 +1,8 @@
 package com.codegym.controller;
 
-import com.codegym.model.Blog;
-import com.codegym.service.IBlogService;
+import com.codegym.model.Product;
 import com.codegym.service.ICategoryService;
+import com.codegym.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -17,9 +17,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.Optional;
 
 @Controller
-public class BlogController {
+public class ProductController {
     @Autowired
-    private IBlogService iBlogService;
+    private IProductService iProductService;
+
     @Autowired
     private ICategoryService iCategoryService;
     @GetMapping(value = {"/list", ""})
@@ -30,43 +31,40 @@ public class BlogController {
         String sortAsc = sort.orElse("");
         model.addAttribute("sort",sortAsc);
         model.addAttribute("categories",this.iCategoryService.findAll());
-        model.addAttribute("blogs", this.iBlogService.findAllAndSearch(searchKeyWord,pageable));
+        model.addAttribute("products", this.iProductService.findAllAndSearch(searchKeyWord,pageable));
         model.addAttribute("search",searchKeyWord);
         return "list";
     }
-    @GetMapping(value = "/detail")
-    public String goDetailBlog(@RequestParam Integer id,Model model){
-        Blog blog = this.iBlogService.findById(id);
-        model.addAttribute("blog",blog);
-        return "detail";
-    }
+
     @GetMapping(value = "/create")
     public String goCreateSong(Model model) {
-        model.addAttribute("blog", new Blog());
+        model.addAttribute("product", new Product());
         model.addAttribute("categories",this.iCategoryService.findAll());
         return "create";
     }
+
     @PostMapping(value = "/create")
-    public String createSong(@ModelAttribute Blog blog, RedirectAttributes redirectAttributes) {
-        this.iBlogService.save(blog);
+    public String createSong(@ModelAttribute Product product, RedirectAttributes redirectAttributes) {
+        this.iProductService.save(product);
         redirectAttributes.addFlashAttribute("message", "Create OK!");
         return"redirect:/list";
     }
     @GetMapping(value = "/edit")
     public String goEditSong(@RequestParam Integer id, Model model){
-        model.addAttribute("blog",iBlogService.findById(id));
         model.addAttribute("categories",this.iCategoryService.findAll());
+        model.addAttribute("product",iProductService.findById(id));
         return "edit";
+    }
+    @PostMapping(value = "edit")
+    public String editSong(@ModelAttribute Product product, RedirectAttributes redirectAttributes){
+        this.iProductService.save(product);
+        redirectAttributes.addFlashAttribute("message", "Update OK!");
+        return"redirect:/list";
     }
     @GetMapping(value = "/delete")
     public String deleteSong(@RequestParam Integer id, RedirectAttributes redirectAttributes){
-        this.iBlogService.remove(id);
+        this.iProductService.remove(id);
         redirectAttributes.addFlashAttribute("message", "Delete OK!");
         return"redirect:/list";
     }
-//    @GetMapping(value = "/search")
-//    public String search(@RequestParam String name,Model model){
-//        model.addAttribute("blogs",this.iBlogService.findByName(name));
-//        return "list";
-//    }
 }
