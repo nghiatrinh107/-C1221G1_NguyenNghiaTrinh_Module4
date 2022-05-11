@@ -55,7 +55,7 @@ public class ProductController {
         model.addAttribute("product",iProductService.findById(id));
         return "edit";
     }
-    @PostMapping(value = "edit")
+    @PostMapping(value = "/edit")
     public String editSong(@ModelAttribute Product product, RedirectAttributes redirectAttributes){
         this.iProductService.save(product);
         redirectAttributes.addFlashAttribute("message", "Update OK!");
