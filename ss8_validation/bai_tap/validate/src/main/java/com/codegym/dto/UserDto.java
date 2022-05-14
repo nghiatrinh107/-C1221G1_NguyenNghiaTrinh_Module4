@@ -20,7 +20,6 @@ public class UserDto implements Validator {
     @NotBlank(message = "Not Null")
     @Pattern(regexp = "(^$|[0-9]*$)")
     private String phone;
-    @NotEmpty(message = "Not Null")
     private String dateOfBirth;
     @NotBlank(message = "Not Null")
     @Email
@@ -82,12 +81,12 @@ public class UserDto implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        UserDto userDto=(UserDto) target;
-        if("".equals(userDto.getDateOfBirth())){
-            errors.rejectValue("dateOfBirth","date.null","nonnn");
-        }else {
-            if((Period.between(LocalDate.parse(userDto.getDateOfBirth()),LocalDate.now()).getYears())<18){
-                errors.rejectValue("dateOfBirth","date.age","NONNN");
+        UserDto userDto = (UserDto) target;
+        if ("".equals(userDto.getDateOfBirth())) {
+            errors.rejectValue("dateOfBirth", "date.null", "nonnn");
+        } else {
+            if ((Period.between(LocalDate.parse(userDto.getDateOfBirth()), LocalDate.now()).getYears()) < 18) {
+                errors.rejectValue("dateOfBirth", "date.age", "NONNN");
             }
         }
     }

@@ -8,10 +8,12 @@ import java.util.List;
 
 public interface IProductService {
 
-    Page<Product> findAllAndSearch(String searchKeyWord, Pageable pageable);
+    
     Product findById(Integer id);
 
     void save(Product product);
 
     void remove(Integer id);
+
+    Page<Product> findAllAndSearch(String name, String price, String category, Pageable pageable);
 }

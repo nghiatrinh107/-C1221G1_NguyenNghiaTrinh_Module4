@@ -18,6 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class FormController {
     @Autowired
     private IUserService iUserService;
+
     @GetMapping(value = "/create")
     public String goCreateSong(Model model) {
         model.addAttribute("userDto", new UserDto());
@@ -28,15 +29,15 @@ public class FormController {
     public String createSong(@ModelAttribute @Validated UserDto userDto,
                              BindingResult bindingResult, RedirectAttributes redirectAttributes,
                              Model model) {
-        new UserDto().validate(userDto , bindingResult);
-        if(bindingResult.hasFieldErrors()){
+        new UserDto().validate(userDto, bindingResult);
+        if (bindingResult.hasFieldErrors()) {
             return "create";
-        }else {
+        } else {
             User user = new User();
-            BeanUtils.copyProperties(userDto,user);
-           this.iUserService.save(user);
+            BeanUtils.copyProperties(userDto, user);
+            this.iUserService.save(user);
             redirectAttributes.addFlashAttribute("message", "Create OK!");
-            return"redirect:/create";
+            return "redirect:/create";
         }
 
 

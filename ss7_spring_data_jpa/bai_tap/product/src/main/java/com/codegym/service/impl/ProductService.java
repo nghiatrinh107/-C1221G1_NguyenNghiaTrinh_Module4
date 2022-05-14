@@ -15,9 +15,10 @@ public class ProductService implements IProductService {
     @Autowired
     private IProductRepository iProductRepository;
 
+
     @Override
-    public Page<Product> findAllAndSearch(String searchKeyWord, Pageable pageable) {
-        return this.iProductRepository.findAllByNameContaining(searchKeyWord,pageable);
+    public Page<Product> findAllAndSearch(String searchName, String searchPrice, String searchCategory, Pageable pageable) {
+        return null;
     }
 
     @Override
