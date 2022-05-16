@@ -16,10 +16,7 @@ public class ProductService implements IProductService {
     private IProductRepository iProductRepository;
 
 
-    @Override
-    public Page<Product> findAllAndSearch(String searchName, String searchPrice, String searchCategory, Pageable pageable) {
-        return null;
-    }
+
 
     @Override
     public Product findById(Integer id) {
@@ -34,5 +31,10 @@ public class ProductService implements IProductService {
     @Override
     public void remove(Integer id) {
         iProductRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Product> findAndSearch(String nameVal, String categoryFind, String priceFind, Pageable pageable) {
+        return this.iProductRepository.findAndSearch("%"+nameVal+"%",categoryFind,"%"+priceFind+"%",pageable);
     }
 }

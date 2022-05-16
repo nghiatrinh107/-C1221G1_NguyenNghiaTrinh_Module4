@@ -15,5 +15,6 @@ public interface IProductService {
 
     void remove(Integer id);
 
-    Page<Product> findAllAndSearch(String name, String price, String category, Pageable pageable);
+    Page<Product> findAndSearch(String nameVal, String categoryFind, String priceFind, Pageable pageable);
+
 }

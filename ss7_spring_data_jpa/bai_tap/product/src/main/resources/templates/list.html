@@ -30,7 +30,7 @@
     <tr>
         <td>STT</td>
         <td>ID</td>
-        <td><a th:href="@{/list(page=${products.number},name=${searchName},price=${searchPrice},category=${searchCategory},sort='name,desc')}" class="fas fa-sort-amount-down"></a> Name Product <a th:href="@{/list(page=${products.number},name=${searchName},price=${searchPrice},category=${searchCategory},sort='name,asc')}" class="fas fa-sort-amount-up"></a></td>
+        <td><a th:href="@{/list(page=${products.number},name=${nameVal},price=${price},searchCategory=${categorySearch},sort='name,desc')}" class="fas fa-sort-amount-down"></a> Name Product <a th:href="@{/list(page=${products.number},name=${nameVal},price=${price},searchCategory=${categorySearch},sort='name,asc')}" class="fas fa-sort-amount-up"></a></td>
         <td>Price</td>
         <td>Description</td>
         <td>Manufacturer</td>
@@ -67,10 +67,10 @@
 <nav aria-label="Page navigation example">
     <ul class="pagination pagination-circle pg-blue">
         <li class="page-item "><a class="page-link" aria-label="Previous" th:if="${products.hasPrevious()}"
-                                  th:href="@{/list(page=0,name=${searchName},price=${searchPrice},category=${searchCategory},sort=${sort})}">First</a></li>
+                                  th:href="@{/list(page=0,name=${nameVal},price=${price},searchCategory=${categorySearch},sort=${sort})}">First</a></li>
         <li class="page-item">
             <a class="page-link" aria-label="Previous" th:if="${products.hasPrevious()}"
-               th:href="@{/list(page=${products.number - 1},name=${searchName},price=${searchPrice},category=${searchCategory},sort=${sort})}">
+               th:href="@{/list(page=${products.number - 1},name=${nameVal},price=${price},searchCategory=${categorySearch},sort=${sort})}">
                 <span aria-hidden="true">&laquo;</span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -78,27 +78,27 @@
         <li class="page-item active">
             <a class="page-link " aria-label="Previous"
                th:if="${products.hasNext()}"
-               th:href="@{/list(page=${products.number},name=${searchName},price=${searchPrice},category=${searchCategory},sort=${sort})}" th:text="${products.number+1}">
+               th:href="@{/list(page=${products.number},name=${nameVal},price=${price},searchCategory=${categorySearch},sort=${sort})}" th:text="${products.number+1}">
 
             </a>
         </li>
         <li class="page-item">
             <a class="page-link" aria-label="Previous"
                th:if="${products.hasNext()}"
-               th:href="@{/list(page=${products.number + 1},name=${searchName},price=${searchPrice},category=${searchCategory},sort=${sort})}" th:text="${products.number+2}">
+               th:href="@{/list(page=${products.number + 1},name=${nameVal},price=${price},searchCategory=${categorySearch},sort=${sort})}" th:text="${products.number+2}">
 
             </a>
         </li>
 
         <li class="page-item">
             <a class="page-link" aria-label="Previous" th:if="${products.hasNext()}"
-               th:href="@{/list(page=${products.number + 1},name=${searchName},price=${searchPrice},category=${searchCategory},sort=${sort})}">
+               th:href="@{/list(page=${products.number + 1},name=${nameVal},price=${price},searchCategory=${categorySearch},sort=${sort})}">
                 <span aria-hidden="true">&raquo;</span>
                 <span class="sr-only">Next</span>
             </a>
         </li>
         <li class="page-item "><a class="page-link" aria-label="Previous" th:if="${products.hasNext()}"
-                                  th:href="@{/list(page=${products.totalPages - 1},name=${searchName},price=${searchPrice},category=${searchCategory},sort=${sort})}">Last</a></li>
+                                  th:href="@{/list(page=${products.totalPages - 1},name=${nameVal},price=${price},searchCategory=${categorySearch},sort=${sort})}">Last</a></li>
     </ul>
 </nav>
 

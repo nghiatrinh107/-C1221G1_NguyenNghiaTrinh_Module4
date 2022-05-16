@@ -12,8 +12,8 @@ import java.util.List;
 
 public interface IProductRepository extends JpaRepository<Product, Integer> {
 
-    @Query(value="select * from product where `name` like :searchName and price like :searchPrice and category_id like :searchCategory" ,
-            countQuery="select * from product where name like :searchName and price like :searchPrice and category_id like :searchCategory",nativeQuery=true)
-    Page<Product> findAndSearch(@Param("searchName") String searchName, @Param("searchPrice") String searchPrice, @Param("searchCategory") String searchCategory, Pageable pageable);
+    @Query(value = "select * from product where name like :nameVal and price like :price and category_id like :category",
+            countQuery = "select * from product where name like :nameVal and price like :price and category_id like :category", nativeQuery = true)
+    Page<Product> findAndSearch(@Param("nameVal") String nameVal, @Param("category") String categoryFind, @Param("price") String priceFind, Pageable pageable);
 
 }

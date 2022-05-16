@@ -24,22 +24,23 @@ public class ProductController {
     @Autowired
     private ICategoryService iCategoryService;
 
-    @GetMapping(value = {"/list", ""})
-    public String goHome(Model model, @PageableDefault(value = 2, sort = {}) Pageable pageable,
-                         @RequestParam("sort") Optional<String> sort,
-                         @RequestParam("searchName") Optional<String> searchName,
-                         @RequestParam("searchPrice") Optional<String> searchPrice,
-                         @RequestParam("searchCategory") Optional<String> searchCategory) {
-        String name = searchName.orElse("");
-        String price = searchPrice.orElse("");
-        String category = searchCategory.orElse("");
-        String sortAsc = sort.orElse("");
-        model.addAttribute("sort", sortAsc);
-        model.addAttribute("categories", this.iCategoryService.findAll());
-        model.addAttribute("products", this.iProductService.findAllAndSearch(name, price, category, pageable));
-        model.addAttribute("searchName", name);
-        model.addAttribute("searchPrice", price);
-        model.addAttribute("searchCategory", category);
+    @GetMapping(value = {"/list",""})
+    public String goList(Model model,
+                         @RequestParam("searchName")Optional<String> name,
+                         @RequestParam("searchPrice") Optional<String> price,
+                         @RequestParam("searchCategory") Optional<String> category,
+                         @RequestParam("sort")Optional<String> sort,
+                         @PageableDefault(value = 2,sort = {})Pageable pageable){
+        String nameVal=name.orElse("");
+        String sortByName=sort.orElse("");
+        String categoryFind=category.orElse("%");
+        String priceFind=price.orElse("");
+        model.addAttribute("categorySearch",categoryFind);
+        model.addAttribute("price",priceFind);
+        model.addAttribute("nameVal",nameVal);
+        model.addAttribute("sort",sortByName);
+        model.addAttribute("products",this.iProductService.findAndSearch(nameVal,categoryFind,priceFind,pageable));
+        model.addAttribute("categories",this.iCategoryService.findAll());
         return "list";
     }
 
