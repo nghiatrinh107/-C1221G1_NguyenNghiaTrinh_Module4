@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e348855b-9efb-4afe-b0d7-2f9f1082969c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/phoneCRUD.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Division.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/EducationDegree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/EducationDegree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/controller/SmartPhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/controller/SmartPhoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../phone/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../phone/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/controller/BlogRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/controller/BlogRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/BlogDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/BlogDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/CategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/repository/ICategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/repository/ICategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/ICategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/ICategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/impl/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/impl/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/impl/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/service/impl/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/thu_vien/src/main/java/com/codegym/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/thu_vien/src/main/java/com/codegym/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/thu_vien/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/thu_vien/src/main/resources/templates/error.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +37,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -71,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653005564507</updated>
       <workItem from="1653005565874" duration="931000" />
+      <workItem from="1653009182423" duration="1376000" />
     </task>
     <servers />
   </component>

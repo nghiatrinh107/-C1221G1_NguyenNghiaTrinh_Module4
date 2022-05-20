@@ -7,7 +7,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,22 +21,13 @@ public class SmartPhoneController {
     @Autowired
     private ISmartPhoneService smartPhoneService;
     @GetMapping("/smartphone/list")
-    public ResponseEntity<Page<SmartPhone>> showList(@PageableDefault
-                                                            (value=2,sort="id",direction = Sort.Direction.ASC) Pageable pageable,
+    public ResponseEntity<Page<SmartPhone>> showList(@PageableDefault(value = 2)Pageable pageable, @RequestParam("sort") Optional<String> sort,
                                                      @RequestParam Optional<String> keyword){
         String keywordvalue=keyword.orElse("");
         Page<SmartPhone> smartPhoneList=smartPhoneService.showAll(keywordvalue,pageable);
         return new ResponseEntity<>(smartPhoneList, HttpStatus.OK);
     }
 
-    @GetMapping("/smartphone/list")
-    public ModelAndView showAll(@PageableDefault
-                                        (value=2,sort="id",direction = Sort.Direction.ASC)Pageable pageable,
-                                @RequestParam Optional<String>keyword){
-        ModelAndView modelAndView=new ModelAndView("/smartphone/list");
-        modelAndView.addObject("smartPhoneList",smartPhoneService.findAll());
-        return modelAndView;
-    }
 
     @PostMapping("/smartphone/create")
     public ResponseEntity<Void> createPhone(@RequestBody SmartPhoneDto smartPhoneDTO){
