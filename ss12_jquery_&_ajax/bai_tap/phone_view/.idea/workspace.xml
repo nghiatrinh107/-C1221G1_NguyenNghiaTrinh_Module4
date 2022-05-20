@@ -2,66 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e348855b-9efb-4afe-b0d7-2f9f1082969c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Division.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/EducationDegree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/blog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/Blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/create_student_momo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.dark.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.dark.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.dark.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.dark.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/css/mdb.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/js/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/js/mdb.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/js/mdb.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/PhoneApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/controller/SmartPhoneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/dto/SmartPhoneDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/model/SmartPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/repository/ISmartPhoneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/service/ISmartPhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/java/com/codegym/service/impl/SmartPhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../phone/src/test/java/com/codegym/PhoneApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phone_view.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/create_student_momo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.dark.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.dark.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.dark.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.dark.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mdb.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/mdb.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/mdb.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/controller/BlogRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/BlogDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/CategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneCRUD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Division.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/EducationDegree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/EducationDegree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/controller/BlogRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/controller/BlogRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/BlogDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/BlogDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/dto/CategoryDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/model/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/bai_tap/blog/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
@@ -78,6 +29,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
@@ -91,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -111,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653005564507</updated>
-      <workItem from="1653005565874" duration="335000" />
+      <workItem from="1653005565874" duration="931000" />
     </task>
     <servers />
   </component>
