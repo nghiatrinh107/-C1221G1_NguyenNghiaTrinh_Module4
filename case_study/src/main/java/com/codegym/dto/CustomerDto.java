@@ -1,40 +1,35 @@
-package com.codegym.model.customer;
+package com.codegym.dto;
 
-import com.codegym.model.contract.Contract;
+import com.codegym.model.customer.CustomerType;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.*;
 
-@Entity
-@Table(name = "customer")
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+public class CustomerDto implements Validator {
     private Integer customerId;
-    @ManyToOne
-    @JoinColumn(name = "customer_type_id",referencedColumnName = "customerTypeId")
+    @NotNull(message = "Chọn loại khách hàng")
     private CustomerType customerType;
+    @NotEmpty(message = "Not Null")
+    @Pattern(regexp = "^((\\p{Lu}(\\p{Ll})+)(\\s)?)+$",message = "Tên không chứa kí tự đặt biệt và số (Nguyễn Văn A) ")
     private String customerName;
-    @Column(columnDefinition = "DATE")
+    @NotEmpty(message = "Not Null")
     private String customerBirth;
-    @Column(columnDefinition = "BIT")
+    @NotNull(message = "Chọn giới tính")
     private Integer customerGender;
+
+    @Pattern(regexp = "\\d{9}|\\d{12}",message = "Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9)")
     private String customerIdCard;
+    @Pattern(regexp = "((\\(84\\)\\+(90))|(\\(84\\)\\+(91))|(090)|(091))\\d{7}",message = "Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx")
     private String customerPhone;
+    @NotEmpty(message = "Not Null")
+    @Email
     private String customerEmail;
+    @NotEmpty(message = "Not Null")
     private String customerAddress;
-    @OneToMany(mappedBy = "customer")
-    private List<Contract> contractList;
 
-    public Customer() {
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public CustomerDto() {
     }
 
     public Integer getCustomerId() {
@@ -51,6 +46,14 @@ public class Customer {
 
     public void setCustomerType(CustomerType customerType) {
         this.customerType = customerType;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String getCustomerBirth() {
@@ -101,11 +104,13 @@ public class Customer {
         this.customerAddress = customerAddress;
     }
 
-    public List<Contract> getContractList() {
-        return contractList;
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
     }
 
-    public void setContractList(List<Contract> contractList) {
-        this.contractList = contractList;
+    @Override
+    public void validate(Object target, Errors errors) {
+
     }
 }

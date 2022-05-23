@@ -12,6 +12,8 @@ public class RentType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer rentTypeId;
     private String rentTypeName;
+    @Column(columnDefinition = "DOUBLE")
+    private String rentTypeCost;
     @OneToMany(mappedBy = "rentType")
     private List<Facility> facilityList;
 

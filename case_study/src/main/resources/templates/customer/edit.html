@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="~{layout :: top-bootstrap}"></th:block>
+</head>
+<body>
+<form th:object="${customerDto}" th:method="post" th:action="@{/customer/create}">
+    <fieldset class="w-75 mx-auto">
+        <legend class="text-center my-4"> <span class="text-secondary">Create Customer</span></legend>
+        <div>
+            <input type="hidden" th:field="*{customerId}" value="0">
+
+        </div>
+
+        <div class="form-outline w-25 mx-auto">
+            <input class="form-control" id="name1" type="text" th:field="*{customerName}"/>
+            <label class="form-label" for="name1">Name</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="price1" type="date" th:field="*{customerBirth}"/>
+            <label class="form-label" for="price1">Customer Birth</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerBirth')}" th:errors="*{customerBirth}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="idCard1" type="text" th:field="*{customerIdCard}"/>
+            <label class="form-label" for="idCard1">Customer Id Card</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerIdCard')}" th:errors="*{customerIdCard}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="phone1" type="text" th:field="*{customerPhone}"/>
+            <label class="form-label" for="phone1">Customer Phone</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="email1" type="text" th:field="*{customerEmail}"/>
+            <label class="form-label" for="email1">Email</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerEmail')}" th:errors="*{customerEmail}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <textarea class="form-control" id="address1" type="text" th:field="*{customerAddress}"></textarea>
+            <label class="form-label" for="address1">Address</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerAddress')}" th:errors="*{customerAddress}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <select  th:field="*{customerGender}" class="form-select" aria-label="Disabled select example" >
+                <option value="0" th:text="---Select---"></option>
+                <option  th:value="1" th:text="Nam"></option>
+                <option  th:value="0" th:text="Nữ"></option>
+            </select>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerGender')}" th:errors="*{customerGender}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <select  th:field="*{customerType}" class="form-select" aria-label="Disabled select example" >
+                <option value="0" th:text="---Select---"></option>
+                <option th:each="type : ${types}" th:value="${type.customerTypeId}" th:text="${type.customerTypeName}"></option>
+            </select>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('customerType')}" th:errors="*{customerType}"></p>
+        </div>
+    </fieldset>
+    <div class="text-center">
+        <button type="submit" class="btn btn-secondary mt-4 mx-2">Update</button>
+        <button type="button" class="btn btn-warning mt-4 mx-2">Cancel</button>
+    </div>
+
+</form>
+<div class="text-center">
+    <a class="btn btn-light mt-4 " th:href="@{/customer/list}">Back to list </a>
+</div>
+<th:block th:replace="~{layout :: bot-bootstrap}"></th:block>
+</body>
+</html>

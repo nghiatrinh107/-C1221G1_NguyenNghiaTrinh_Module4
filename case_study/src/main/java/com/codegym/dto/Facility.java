@@ -1,39 +1,26 @@
-package com.codegym.model.facility;
+package com.codegym.dto;
 
-import com.codegym.model.contract.Contract;
-import com.codegym.model.customer.CustomerType;
+import com.codegym.model.facility.RentType;
+import com.codegym.model.facility.ServiceType;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-@Table(name = "facility")
-public class Facility {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Facility implements Validator {
     private Integer facilityId;
+    @NotBlank(message = "not null")
     private String facilityName;
-    @Column(columnDefinition = "INT")
     private Integer facilityArea;
-    @Column(columnDefinition = "DOUBLE")
     private String facilityCost;
-    @Column(columnDefinition = "INT")
     private String facilityMaxPeople;
-    @ManyToOne
-    @JoinColumn(name = "rent_type_id",referencedColumnName = "rentTypeId")
     private RentType rentType;
-    @ManyToOne
-    @JoinColumn(name = "service_type_id",referencedColumnName = "serviceTypeId")
     private ServiceType serviceType;
     private String standardRoom;
     private String descriptionOtherConvenience;
-    @Column(columnDefinition = "DOUBLE")
     private String poolArea;
-    @Column(columnDefinition = "INT")
     private String numberOfFloors;
 
-    @OneToMany(mappedBy = "facility")
-    private List<Contract> contractList;
     public Facility() {
     }
 
@@ -125,11 +112,13 @@ public class Facility {
         this.numberOfFloors = numberOfFloors;
     }
 
-    public List<Contract> getContractList() {
-        return contractList;
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
     }
 
-    public void setContractList(List<Contract> contractList) {
-        this.contractList = contractList;
+    @Override
+    public void validate(Object target, Errors errors) {
+
     }
 }

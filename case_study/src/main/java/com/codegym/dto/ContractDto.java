@@ -1,40 +1,22 @@
-package com.codegym.model.contract;
+package com.codegym.dto;
 
 import com.codegym.model.customer.Customer;
 import com.codegym.model.employee.Employee;
 import com.codegym.model.facility.Facility;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
-import javax.persistence.*;
-import java.util.List;
-
-@Entity
-@Table(name = "contract")
-public class Contract {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ContractDto implements Validator {
     private Integer contractId;
-    @Column(columnDefinition = "DATETIME")
     private String contractStartDay;
-    @Column(columnDefinition = "DATETIME")
     private String contractEndDay;
-    @Column(columnDefinition = "DOUBLE")
     private String contractDeposit;
-    @Column(columnDefinition = "DOUBLE")
     private String contractTotalMoney;
-    @ManyToOne
-    @JoinColumn(name = "employee_id", referencedColumnName = "employeeId")
     private Employee employee;
-    @ManyToOne
-    @JoinColumn(name = "facility_id", referencedColumnName = "facilityId")
     private Facility facility;
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "customerId")
     private Customer customer;
 
-    @OneToMany(mappedBy = "contract")
-    List<ContractDetail> ContractDetails;
-
-    public Contract() {
+    public ContractDto() {
     }
 
     public Integer getContractId() {
@@ -101,12 +83,13 @@ public class Contract {
         this.customer = customer;
     }
 
-    public List<ContractDetail> getContractDetails() {
-        return ContractDetails;
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
     }
 
-    public void setContractDetails(List<ContractDetail> ContractDetails) {
-        this.ContractDetails = ContractDetails;
-    }
+    @Override
+    public void validate(Object target, Errors errors) {
 
+    }
 }

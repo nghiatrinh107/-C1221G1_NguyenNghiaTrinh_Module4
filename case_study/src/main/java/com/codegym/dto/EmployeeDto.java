@@ -1,38 +1,25 @@
-package com.codegym.model.employee;
+package com.codegym.dto;
 
-import com.codegym.model.contract.Contract;
-import com.codegym.model.facility.Facility;
+import com.codegym.model.employee.Division;
+import com.codegym.model.employee.EducationDegree;
+import com.codegym.model.employee.Position;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
-import javax.persistence.*;
-import java.util.List;
-
-@Entity
-@Table(name = "employee")
-public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class EmployeeDto implements Validator {
     private Integer employeeId;
-
     private String employeeName;
-    @Column(columnDefinition = "DATE")
     private String employeeBirth;
     private String employeeIdCard;
     private String employeeSalary;
     private String employeePhone;
     private String employeeEmail;
     private String employeeAddress;
-    @ManyToOne
-    @JoinColumn(name = "position_id",referencedColumnName = "positionId")
     private Position position;
-    @ManyToOne
-    @JoinColumn(name = "division_id",referencedColumnName = "divisionId")
     private Division division;
-    @ManyToOne
-    @JoinColumn(name = "education_degree_id",referencedColumnName = "educationDegreeId")
     private EducationDegree educationDegree;
-    @OneToMany(mappedBy = "employee")
-    private List<Contract> contractList;
-    public Employee() {
+
+    public EmployeeDto() {
     }
 
     public Integer getEmployeeId() {
@@ -123,11 +110,13 @@ public class Employee {
         this.educationDegree = educationDegree;
     }
 
-    public List<Contract> getContractList() {
-        return contractList;
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
     }
 
-    public void setContractList(List<Contract> contractList) {
-        this.contractList = contractList;
+    @Override
+    public void validate(Object target, Errors errors) {
+
     }
 }
