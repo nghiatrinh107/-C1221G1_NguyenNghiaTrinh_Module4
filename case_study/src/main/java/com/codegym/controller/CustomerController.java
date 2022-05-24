@@ -80,6 +80,7 @@ public class CustomerController {
     public String editCustomer(Model model,@ModelAttribute @Validated CustomerDto customerDto,
                                BindingResult bindingResult,RedirectAttributes redirectAttributes){
         if (bindingResult.hasFieldErrors()) {
+            model.addAttribute("types", this.iCustomerTypeService.findAll());
             return "customer/edit";
         } else {
             Customer customer = new Customer();

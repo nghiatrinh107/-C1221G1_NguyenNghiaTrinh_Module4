@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <th:block th:replace="~{/layout::top-bootstrap}"></th:block>
+</head>
+<body>
+<center><h1 class="light"><a href="/employee/list">Employee List</a></h1></center>
+<h2 th:text="${message}" class="text-success"></h2>
+<a class="btn btn-primary" href="/employee/create">Create new Employee</a>
+<hr>
+<form action="/employee/list" method="get">
+
+    <div class="input-group">
+        <div class="form-outline">
+            <input type="search" id="form1" class="form-control" name="name"/>
+            <label class="form-label" for="form1">Search by name</label>
+        </div>
+        <div class="form-outline">
+            <select class="form-select" aria-label="Disabled select example" name="position">
+                <option value="%" th:text="---Position---"></option>
+                <option th:each="positionS : ${positions}" th:value="${positionS.positionId}"
+                        th:text="${positionS.positionName}"></option>
+            </select>
+        </div>
+        <div class="form-outline">
+            <select class="form-select" aria-label="Disabled select example" name="division">
+                <option value="%" th:text="---Division---"></option>
+                <option th:each="divisionS : ${divisions}" th:value="${divisionS.divisionId}"
+                        th:text="${divisionS.divisionName}"></option>
+            </select>
+        </div>
+        <div class="form-outline">
+            <select class="form-select" aria-label="Disabled select example" name="educationDegree">
+                <option value="%" th:text="---Education-Degree---"></option>
+                <option th:each="educationDegreeS : ${educationDegrees}" th:value="${educationDegreeS.educationDegreeId}"
+                        th:text="${educationDegreeS.educationDegreeName}"></option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</form>
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <td class="col-">STT</td>
+        <td class="col-">ID</td>
+        <td class="col-">
+            <a th:href="@{/employee/list(page=${employees.number},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort='employee_name,desc')}"
+               class="fas fa-sort-amount-down"></a>Name<a
+                th:href="@{/employee/list(page=${employees.number},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort='customer_name,asc')}"
+                class="fas fa-sort-amount-up"></a></td>
+        <td class="col-">Birth</td>
+        <td class="col-">Id Card</td>
+        <td class="col-">Contact</td>
+        <td class="col-">Address</td>
+        <td class="col-">Salary</td>
+        <td class="col-">Position</td>
+        <td class="col-">Division</td>
+        <td class="col-">Education Degree</td>
+        <td class="col-">Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee,loop : ${employees}">
+        <td th:text="${loop.count+(employees.number*3)}"></td>
+        <td th:text="${employee.employeeId}"></td>
+        <td th:text="${employee.employeeName}"></td>
+        <td th:text="${employee.employeeBirth}"></td>
+        <td th:text="${employee.employeeIdCard}"></td>
+        <td >
+            <p th:text="${employee.employeePhone}"></p>
+            <p th:text="${employee.employeeEmail}"></p>
+        </td>
+        <td th:text="${employee.employeeAddress}"></td>
+        <td th:text="${employee.employeeSalary}"></td>
+        <td th:text="${employee.position.positionName}"></td>
+        <td th:text="${employee.division.divisionName}"></td>
+        <td th:text="${employee.educationDegree.educationDegreeName}"></td>
+        <td>
+            <a class="btn btn-warning" th:href="@{/employee/edit(id=${employee.employeeId})}"
+               style="color: white">Edit</a>
+
+            <button th:attr="onclick=|deleteModal('${employee.employeeId}', '${employee.employeeName}')|" type="button"
+                    class="btn btn-danger"
+                    data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination pagination-circle pg-blue">
+        <li class="page-item "><a class="page-link" aria-label="Previous" th:if="${employees.hasPrevious()}"
+                                  th:href="@{/employee/list(page=0,name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort=${sort})}">First</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous" th:if="${employees.hasPrevious()}"
+               th:href="@{/employee/list(page=${employees.number - 1},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort=${sort})}">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link " aria-label="Previous"
+               th:if="${employees.hasNext()}"
+               th:href="@{/employee/list(page=${employees.number},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort=${sort})}"
+               th:text="${employees.number+1}">
+
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous"
+               th:if="${employees.hasNext()}"
+               th:href="@{/employee/list(page=${employees.number + 1},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort=${sort})}"
+               th:text="${employees.number+2}">
+
+            </a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous" th:if="${employees.hasNext()}"
+               th:href="@{/employee/list(page=${employees.number + 1},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort=${sort})}">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+        <li class="page-item "><a class="page-link" aria-label="Previous" th:if="${employees.hasNext()}"
+                                  th:href="@{/employee/list(page=${employees.totalPages - 1},name=${name},position=${position},division=${division},educationDegree=${educationDegree},sort=${sort})}">Last</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Modal -->
+<form th:action="@{/customer/delete}">
+    <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+         data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog  ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có muốn xóa blog này không<br>
+                    <span>Tên: <p id="name"></p></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                        Close
+                    </button>
+                    <input type="hidden" name="id" id="id-del">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<th:block th:replace="~{/layout :: bot-bootstrap}"></th:block>
+<script>
+    function deleteModal(id, name) {
+        document.getElementById("id-del").value = id;
+        document.getElementById("name").innerText = name;
+    }
+</script>
+</body>
+</html>
