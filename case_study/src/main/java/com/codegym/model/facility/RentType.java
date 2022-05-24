@@ -14,7 +14,7 @@ public class RentType {
     private String rentTypeName;
     @Column(columnDefinition = "DOUBLE")
     private String rentTypeCost;
-    @OneToMany(mappedBy = "rentType")
+    @OneToMany(mappedBy = "rentType",cascade = CascadeType.ALL)
     private List<Facility> facilityList;
 
     public RentType() {

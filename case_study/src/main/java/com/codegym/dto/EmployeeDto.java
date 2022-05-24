@@ -6,17 +6,31 @@ import com.codegym.model.employee.Position;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.*;
+
 public class EmployeeDto implements Validator {
     private Integer employeeId;
+    @Pattern(regexp = "^((\\p{Lu}(\\p{Ll})+)(\\s)?)+$",message = "Tên không chứa kí tự đặt biệt và số (Nguyễn Văn A) ")
     private String employeeName;
+    @NotEmpty(message = "Not Null")
     private String employeeBirth;
+    @Pattern(regexp = "\\d{9}|\\d{12}",message = "Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9)")
     private String employeeIdCard;
+    @NotBlank(message = "not null")
+    @Pattern(regexp = "[+]?\\d+",message = "Tiền kí tự bằng số,không có kí tự đặc biệt")
     private String employeeSalary;
+    @Pattern(regexp = "((\\(84\\)\\+(90))|(\\(84\\)\\+(91))|(090)|(091))\\d{7}",message = "Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx")
     private String employeePhone;
+    @NotBlank(message = "Not Null")
+    @Email
     private String employeeEmail;
+    @NotBlank(message = "not null")
     private String employeeAddress;
+    @NotNull(message = "Chọn vị trí")
     private Position position;
+    @NotNull(message = "Chọn chức vụ")
     private Division division;
+    @NotNull(message = "Chọn trình độ")
     private EducationDegree educationDegree;
 
     public EmployeeDto() {

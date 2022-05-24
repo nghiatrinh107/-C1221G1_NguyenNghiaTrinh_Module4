@@ -30,7 +30,7 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "education_degree_id",referencedColumnName = "educationDegreeId")
     private EducationDegree educationDegree;
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
     private List<Contract> contractList;
     public Employee() {
     }

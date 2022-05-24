@@ -17,7 +17,7 @@ public class AttachService {
     private String unitAttachService;
     private String statusAttachService;
 
-    @OneToMany(mappedBy = "attachService")
+    @OneToMany(mappedBy = "attachService",cascade = CascadeType.ALL)
     List<ContractDetail> contractDetails;
 
     public AttachService() {

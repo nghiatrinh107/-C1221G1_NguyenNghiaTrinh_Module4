@@ -61,7 +61,7 @@
             <p style="color: red" th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{employeeAddress}"></p>
         </div>
         <div class="form-outline w-25 mx-auto my-4">
-            <input class="form-control" id="salary1" type="text" th:field="*{employeeSalary}"/>
+            <input class="form-control" id="salary1" type="number" th:field="*{employeeSalary}"/>
             <label class="form-label" for="salary1">Salary</label>
         </div>
         <div class=" w-25 mx-auto">
@@ -98,7 +98,7 @@
             </select>
         </div>
         <div class=" w-25 mx-auto">
-            <p style="color: red" th:if="${#fields.hasErrors('position')}" th:errors="*{position}"></p>
+            <p style="color: red" th:if="${#fields.hasErrors('educationDegree')}" th:errors="*{educationDegree}"></p>
         </div>
     </fieldset>
     <div class="text-center">

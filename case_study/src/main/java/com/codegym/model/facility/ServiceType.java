@@ -10,7 +10,7 @@ public class ServiceType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer serviceTypeId;
     private String serviceTypeName;
-    @OneToMany(mappedBy = "serviceType")
+    @OneToMany(mappedBy = "serviceType",cascade = CascadeType.ALL)
     private List<Facility> facilityList;
 
     public ServiceType() {

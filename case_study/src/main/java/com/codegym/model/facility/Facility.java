@@ -32,7 +32,7 @@ public class Facility {
     @Column(columnDefinition = "INT")
     private String numberOfFloors;
 
-    @OneToMany(mappedBy = "facility")
+    @OneToMany(mappedBy = "facility",cascade = CascadeType.ALL)
     private List<Contract> contractList;
     public Facility() {
     }
@@ -131,5 +131,23 @@ public class Facility {
 
     public void setContractList(List<Contract> contractList) {
         this.contractList = contractList;
+    }
+
+    @Override
+    public String toString() {
+        return "Facility{" +
+                "facilityId=" + facilityId +
+                ", facilityName='" + facilityName + '\'' +
+                ", facilityArea=" + facilityArea +
+                ", facilityCost='" + facilityCost + '\'' +
+                ", facilityMaxPeople='" + facilityMaxPeople + '\'' +
+                ", rentType=" + rentType +
+                ", serviceType=" + serviceType +
+                ", standardRoom='" + standardRoom + '\'' +
+                ", descriptionOtherConvenience='" + descriptionOtherConvenience + '\'' +
+                ", poolArea='" + poolArea + '\'' +
+                ", numberOfFloors='" + numberOfFloors + '\'' +
+                ", contractList=" + contractList +
+                '}';
     }
 }

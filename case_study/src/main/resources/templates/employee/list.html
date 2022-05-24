@@ -33,7 +33,7 @@
         </div>
         <div class="form-outline">
             <select class="form-select" aria-label="Disabled select example" name="educationDegree">
-                <option value="%" th:text="---Education-Degree---"></option>
+                <option value="%" th:text="${'---Education Degree---'}"></option>
                 <option th:each="educationDegreeS : ${educationDegrees}" th:value="${educationDegreeS.educationDegreeId}"
                         th:text="${educationDegreeS.educationDegreeName}"></option>
             </select>
@@ -138,7 +138,7 @@
 </nav>
 
 <!-- Modal -->
-<form th:action="@{/customer/delete}">
+<form th:action="@{/employee/delete}">
     <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
          data-mdb-backdrop="true" data-mdb-keyboard="true">
         <div class="modal-dialog  ">

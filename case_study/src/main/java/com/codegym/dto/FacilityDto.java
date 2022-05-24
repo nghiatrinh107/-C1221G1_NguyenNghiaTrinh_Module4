@@ -7,7 +7,7 @@ import org.springframework.validation.Validator;
 
 import javax.validation.constraints.NotBlank;
 
-public class Facility implements Validator {
+public class FacilityDto implements Validator {
     private Integer facilityId;
     @NotBlank(message = "not null")
     private String facilityName;
@@ -21,7 +21,7 @@ public class Facility implements Validator {
     private String poolArea;
     private String numberOfFloors;
 
-    public Facility() {
+    public FacilityDto() {
     }
 
     public Integer getFacilityId() {
