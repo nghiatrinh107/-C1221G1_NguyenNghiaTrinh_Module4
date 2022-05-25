@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <th:block th:replace="~{/layout::top-bootstrap}"></th:block>
+</head>
+<body>
+<center><h1 class="light"><a href="/employee/list">Contract List</a></h1></center>
+<h2 th:text="${message}" class="text-success"></h2>
+<a class="btn btn-primary" href="/employee/create">Create new Contract</a>
+<hr>
+<form action="/contract/list" method="get">
+
+    <div class="input-group">
+        <div class="form-outline">
+            <select class="form-select" aria-label="Disabled select example" name="customer">
+                <option value="%" th:text="${'---Select Customer---'}"></option>
+                <option th:each="customerS : ${customers}" th:value="${customerS.customerId}"
+                        th:text="${customerS.customerName}"></option>
+            </select>
+        </div>
+        <div class="form-outline">
+            <select class="form-select" aria-label="Disabled select example" name="employee">
+                <option value="%" th:text="${'---Select Employee---'}"></option>
+                <option th:each="employeeS : ${employees}" th:value="${employeeS.employeeId}"
+                        th:text="${employeeS.employeeName}"></option>
+            </select>
+        </div>
+        <div class="form-outline">
+            <select class="form-select" aria-label="Disabled select example" name="facility">
+                <option value="%" th:text="${'---Select Facility---'}"></option>
+                <option th:each="facilityS : ${facilities}" th:value="${facilityS.facilityId}"
+                        th:text="${facilityS.facilityName}"></option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</form>
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <td class="col-">STT</td>
+        <td class="col-">ID</td>
+        <td class="col-">Facility</td>
+        <td class="col-">Customer</td>
+        <td class="col-">Contract Start Day</td>
+        <td class="col-">Contract End Day</td>
+        <td class="col-">Contract Deposit</td>
+        <td class="col-">Contract Total Money</td>
+        <td class="col-">Employee</td>
+        <td class="col-">Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contract,loop : ${contracts}">
+        <td th:text="${loop.count+(contracts.number*3)}"></td>
+        <td th:text="${contract.contractId}"></td>
+        <td th:text="${contract.facility.facilityName}"></td>
+        <td th:text="${contract.customer.customerName}"></td>
+        <td th:text="${contract.contractStartDay}"></td>
+        <td th:text="${contract.contractEndDay}"></td>
+        <td th:text="${contract.contractDeposit}"></td>
+        <td th:text="${contract.contractTotalMoney}"></td>
+        <td th:text="${contract.employee.employeeName}"></td>
+        <td>
+            <a class="btn btn-warning" th:href="@{/contract/edit(id=${contract.contractId})}"
+               style="color: white">Edit</a>
+
+            <button th:attr="onclick=|deleteModal('${contract.contractId}')|" type="button"
+                    class="btn btn-danger"
+                    data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination pagination-circle pg-blue">
+        <li class="page-item "><a class="page-link" aria-label="Previous" th:if="${contracts.hasPrevious()}"
+                                  th:href="@{/contract/list(page=0,customer=${customerSearch},employee=${employeeSearch},facility=${facilitySearch},sort=${sort})}">First</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous" th:if="${contracts.hasPrevious()}"
+               th:href="@{/contract/list(page=${contracts.number - 1},customer=${customerSearch},employee=${employeeSearch},facility=${facilitySearch},sort=${sort})}">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link " aria-label="Previous"
+               th:if="${contracts.hasNext()}"
+               th:href="@{/contract/list(page=${contracts.number},customer=${customerSearch},employee=${employeeSearch},facility=${facilitySearch},sort=${sort})}"
+               th:text="${contracts.number+1}">
+
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous"
+               th:if="${contracts.hasNext()}"
+               th:href="@{/contract/list(page=${contracts.number + 1},customer=${customerSearch},employee=${employeeSearch},facility=${facilitySearch},sort=${sort})}"
+               th:text="${contracts.number+2}">
+
+            </a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous" th:if="${contracts.hasNext()}"
+               th:href="@{/contract/list(page=${contracts.number + 1},customer=${customerSearch},employee=${employeeSearch},facility=${facilitySearch},sort=${sort})}">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+        <li class="page-item "><a class="page-link" aria-label="Previous" th:if="${contracts.hasNext()}"
+                                  th:href="@{/contract/list(page=${contracts.totalPages - 1},customer=${customerSearch},employee=${employeeSearch},facility=${facilitySearch},sort=${sort})}">Last</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Modal -->
+<form th:action="@{/contract/delete}">
+    <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+         data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog  ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có muốn xóa blog này không<br>
+                    <span>Tên: <p id="name"></p></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                        Close
+                    </button>
+                    <input type="hidden" name="id" id="id-del">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<th:block th:replace="~{/layout :: bot-bootstrap}"></th:block>
+<script>
+    function deleteModal(id) {
+        document.getElementById("id-del").value = id;
+        document.getElementById("name").innerText = id;
+    }
+</script>
+</body>
+</html>

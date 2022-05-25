@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface ICustomerRepository extends JpaRepository<Customer,Integer> {
 
-    @Query(value = "select * from customer where customer_name like :nameVal and customer_address like :address and customer_type_id like :type",
-            countQuery = "select * from customer where customer_name like :nameVal and customer_address like :address and customer_type_id like :type", nativeQuery = true)
+    @Query(value = "select * from customer where customer_name like :nameVal and customer_address like :address and customer_type_id like :type and status = 1",
+            countQuery = "select * from customer where customer_name like :nameVal and customer_address like :address and customer_type_id like :type and status = 1", nativeQuery = true)
     Page<Customer> findAndSearch(@Param("nameVal") String nameVal,@Param("type") String typeFind,@Param("address") String addressFind, Pageable pageable);
 }

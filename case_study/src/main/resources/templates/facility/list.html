@@ -110,7 +110,7 @@
         <li class="page-item">
             <a class="page-link" aria-label="Previous"
                th:if="${facilities.hasNext()}"
-               th:href="@{facility/list(page=${facilities.number + 1},name=${name},rent=${rent},type=${type},sort=${sort})}"
+               th:href="@{/facility/list(page=${facilities.number + 1},name=${name},rent=${rent},type=${type},sort=${sort})}"
                th:text="${facilities.number+2}">
 
             </a>

@@ -25,8 +25,18 @@ public class Customer {
     private String customerAddress;
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     private List<Contract> contractList;
+    @Column(columnDefinition = "BIT default 1")
+    private Integer status;
 
     public Customer() {
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public String getCustomerName() {
