@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="~{layout :: top-bootstrap}"></th:block>
+</head>
+<body>
+<form th:object="${facilityDto}" th:method="post" th:action="@{/facility/create}">
+    <fieldset class="w-75 mx-auto">
+        <legend class="text-center my-4"> <span class="text-secondary">Create Customer</span></legend>
+        <div>
+            <input type="hidden" th:field="*{facilityId}" value="0">
+        </div>
+
+        <div class="form-outline w-25 mx-auto">
+            <input class="form-control" id="name1" type="text" th:field="*{facilityName}"/>
+            <label class="form-label" for="name1">Name</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('facilityName')}" th:errors="*{facilityName}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="price1" type="number" th:field="*{facilityArea}"/>
+            <label class="form-label" for="price1">Area</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('facilityArea')}" th:errors="*{facilityArea}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="idCard1" type="text" th:field="*{facilityCost}"/>
+            <label class="form-label" for="idCard1">Cost</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('facilityCost')}" th:errors="*{facilityCost}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="phone1" type="text" th:field="*{facilityMaxPeople}"/>
+            <label class="form-label" for="phone1">Max People</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('facilityMaxPeople')}" th:errors="*{facilityMaxPeople}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <input class="form-control" id="email1" type="text" th:field="*{standardRoom}"/>
+            <label class="form-label" for="email1">Standard Room</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('standardRoom')}" th:errors="*{standardRoom}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <textarea class="form-control" id="address1" type="text" th:field="*{descriptionOtherConvenience}"></textarea>
+            <label class="form-label" for="address1">Description Other Convenience</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('descriptionOtherConvenience')}" th:errors="*{descriptionOtherConvenience}"></p>
+        </div>
+        <div class="form-outline w-25 mx-auto my-4" id="input-pool">
+            <input class="form-control" id="pool1" type="number" th:field="*{poolArea}"/>
+            <label class="form-label" for="pool1">Pool Area</label>
+        </div>
+
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}"></p>
+        </div>
+        <div class="form-outline w-25 mx-auto my-4" id="input-floors">
+            <input class="form-control" id="floors" type="number" th:field="*{numberOfFloors}"/>
+            <label class="form-label" for="floors">Number Of Floors</label>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('numberOfFloors')}" th:errors="*{numberOfFloors}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <label class="form-label" >Rent Type</label>
+            <select  th:field="*{rentType}" class="form-select" aria-label="Disabled select example" >
+                <option value="" th:text="---Select---"></option>
+                <option th:each="rentType : ${rentTypes}" th:value="${rentType.rentTypeId}" th:text="${rentType.rentTypeName}"></option>
+            </select>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('rentType')}" th:errors="*{rentType}"></p>
+        </div>
+
+        <div class="form-outline w-25 mx-auto my-4">
+            <label class="form-label" >Service Type</label>
+            <select  th:field="*{serviceType}" class="form-select" aria-label="Disabled select example"  id="select-facility">
+                <option value="" th:text="---Select---"></option>
+                <option th:each="serviceType : ${serviceTypes}" th:value="${serviceType.serviceTypeId}" th:text="${serviceType.serviceTypeName}"></option>
+            </select>
+        </div>
+        <div class=" w-25 mx-auto">
+            <p style="color: red" th:if="${#fields.hasErrors('serviceType')}" th:errors="*{serviceType}"></p>
+        </div>
+
+
+    </fieldset>
+    <div class="text-center">
+        <button type="submit" class="btn btn-secondary mt-4 mx-2">Create</button>
+        <button type="button" class="btn btn-warning mt-4 mx-2">Cancel</button>
+    </div>
+
+</form>
+<div class="text-center">
+    <a class="btn btn-light mt-4 " th:href="@{/facility/list}">Back to list </a>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#select-facility").change(function () {
+            if (this.value == 3) {
+                $("#input-pool").hide();
+                $("#input-pool").find("input").prop("disabled",true);
+                $("#input-floors").hide();
+                $("#input-floors").find("input").prop("disabled",true);
+            } else if (this.value == 2) {
+                $("#input-pool").hide();
+                $("#input-pool").find("input").prop("disabled",true);
+                $("#input-floors").show();
+                $("#input-floors").find("input").prop("disabled",false);
+            } else if (this.value == 1) {
+                $("#input-pool").show();
+                $("#input-pool").find("input").prop("disabled",false);
+                $("#input-floors").show();
+                $("#input-floors").find("input").prop("disabled",false);
+            }
+        });
+    });
+</script>
+
+<th:block th:replace="~{layout :: bot-bootstrap}"></th:block>
+</body>
+</html>

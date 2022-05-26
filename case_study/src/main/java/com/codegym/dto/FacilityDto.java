@@ -1,22 +1,32 @@
 package com.codegym.dto;
 
+import com.codegym.model.facility.Facility;
 import com.codegym.model.facility.RentType;
 import com.codegym.model.facility.ServiceType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class FacilityDto implements Validator {
     private Integer facilityId;
-    @NotBlank(message = "not null")
+    @NotNull(message = "not null")
     private String facilityName;
+    @NotNull(message = "not null")
     private Integer facilityArea;
+    @NotNull(message = "not null")
     private String facilityCost;
+    @NotNull(message = "not null")
     private String facilityMaxPeople;
+    @NotNull(message = "not null")
     private RentType rentType;
+    @NotNull(message = "not null")
     private ServiceType serviceType;
+    @NotNull(message = "not null")
     private String standardRoom;
+    @NotNull(message = "not null")
     private String descriptionOtherConvenience;
     private String poolArea;
     private String numberOfFloors;
@@ -119,6 +129,15 @@ public class FacilityDto implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-
+        FacilityDto facilityDto = (FacilityDto) target;
+        if (facilityDto.getServiceType().getServiceTypeId() == 1 && !facilityDto.getNumberOfFloors().matches("[+]?\\d+")) {
+            errors.rejectValue("numberOfFloors", "facility.number", "Nonnn");
+        }
+        if (facilityDto.getServiceType().getServiceTypeId() == 1 && !facilityDto.getPoolArea().matches("[+]?\\d+")) {
+            errors.rejectValue("poolArea", "facility.number", "Nonnn");
+        }
+        if (facilityDto.getServiceType().getServiceTypeId() == 2 && !facilityDto.getNumberOfFloors().matches("[+]?\\d+")) {
+            errors.rejectValue("numberOfFloors", "facility.number", "Nonnn");
+        }
     }
 }

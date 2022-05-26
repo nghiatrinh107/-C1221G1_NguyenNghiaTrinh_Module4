@@ -17,7 +17,7 @@ public class EmployeeDto implements Validator {
     @Pattern(regexp = "\\d{9}|\\d{12}",message = "Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9)")
     private String employeeIdCard;
     @NotBlank(message = "not null")
-    @Pattern(regexp = "[+]?\\d+",message = "Tiền kí tự bằng số,không có kí tự đặc biệt")
+    @Pattern(regexp = "[+]?\\d+",message = "Tiền bằng số,không có kí tự đặc biệt")
     private String employeeSalary;
     @Pattern(regexp = "((\\(84\\)\\+(90))|(\\(84\\)\\+(91))|(090)|(091))\\d{7}",message = "Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx")
     private String employeePhone;

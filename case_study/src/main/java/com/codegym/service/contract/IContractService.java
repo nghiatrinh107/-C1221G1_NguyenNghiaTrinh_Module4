@@ -6,4 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface IContractService {
     Page<Contract> findAndSearch(String customer, String employee, String facility, Pageable pageable);
+
+    void save(Contract contract);
 }

@@ -72,5 +72,15 @@ public class FacilityController {
             return "redirect:/facility/list";
         }
     }
+    @GetMapping(value = "/edit")
+    public  String goEditFacility(@RequestParam Integer id,Model model){
+        Facility facility = iFacilityService.findById(id);
+        FacilityDto facilityDto =new FacilityDto();
+        BeanUtils.copyProperties(facility,facilityDto);
+        model.addAttribute("facilityDto",facilityDto);
+        model.addAttribute("rentTypes",this.iRentTypeService.findAll());
+        model.addAttribute("serviceTypes",this.iServiceTypeService.findAll());
+        return "facility/edit";
+    }
 
 }

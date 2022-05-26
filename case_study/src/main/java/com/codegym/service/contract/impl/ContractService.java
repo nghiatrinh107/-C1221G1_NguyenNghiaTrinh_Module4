@@ -17,4 +17,9 @@ public class ContractService implements IContractService {
     public Page<Contract> findAndSearch(String customer, String employee, String facility, Pageable pageable) {
         return iContractRepository.findAndSearch(customer,employee,facility,pageable);
     }
+
+    @Override
+    public void save(Contract contract) {
+        iContractRepository.save(contract);
+    }
 }

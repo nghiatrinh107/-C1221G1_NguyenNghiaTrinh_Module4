@@ -12,4 +12,6 @@ public interface IFacilityService {
     void save(Facility facility);
 
     List<Facility> findAll();
+
+    Facility findById(Integer id);
 }

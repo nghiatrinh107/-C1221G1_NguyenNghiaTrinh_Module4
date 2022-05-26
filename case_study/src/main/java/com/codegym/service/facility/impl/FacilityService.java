@@ -28,4 +28,9 @@ public class FacilityService implements IFacilityService {
     public List<Facility> findAll() {
         return this.iFacilityRepository.findAll();
     }
+
+    @Override
+    public Facility findById(Integer id) {
+        return iFacilityRepository.findById(id).orElse(null);
+    }
 }
