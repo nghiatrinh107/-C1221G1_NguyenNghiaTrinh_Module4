@@ -1,10 +1,12 @@
 package com.codegym.dto;
 
+import com.codegym.model.customer.Customer;
 import com.codegym.model.customer.CustomerType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.validation.constraints.*;
+import java.util.List;
 
 
 public class CustomerDto implements Validator {
@@ -28,8 +30,25 @@ public class CustomerDto implements Validator {
     private String customerEmail;
     @NotEmpty(message = "Not Null")
     private String customerAddress;
-
+    private Integer status;
+    private List<Customer> customers;
     public CustomerDto() {
+    }
+
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Integer getCustomerId() {
@@ -111,6 +130,11 @@ public class CustomerDto implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-
+        CustomerDto customerDto =  (CustomerDto) target;
+        for (int i = 0; i <customerDto.customers.size() ; i++) {
+            if(customerDto.customerEmail.equals(customerDto.customers.get(i).getCustomerEmail())){
+                errors.rejectValue("customerEmail", "customer.email", "nilnon1");
+            }
+        }
     }
 }

@@ -12,21 +12,21 @@ import javax.validation.constraints.NotNull;
 
 public class FacilityDto implements Validator {
     private Integer facilityId;
-    @NotNull(message = "not null")
+    @NotBlank(message = "not null")
     private String facilityName;
     @NotNull(message = "not null")
     private Integer facilityArea;
-    @NotNull(message = "not null")
+    @NotBlank(message = "not null")
     private String facilityCost;
-    @NotNull(message = "not null")
+    @NotBlank(message = "not null")
     private String facilityMaxPeople;
     @NotNull(message = "not null")
     private RentType rentType;
-    @NotNull(message = "not null")
+
     private ServiceType serviceType;
-    @NotNull(message = "not null")
+    @NotBlank(message = "not null")
     private String standardRoom;
-    @NotNull(message = "not null")
+    @NotBlank(message = "not null")
     private String descriptionOtherConvenience;
     private String poolArea;
     private String numberOfFloors;
@@ -130,6 +130,7 @@ public class FacilityDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         FacilityDto facilityDto = (FacilityDto) target;
+
         if (facilityDto.getServiceType().getServiceTypeId() == 1 && !facilityDto.getNumberOfFloors().matches("[+]?\\d+")) {
             errors.rejectValue("numberOfFloors", "facility.number", "Nonnn");
         }

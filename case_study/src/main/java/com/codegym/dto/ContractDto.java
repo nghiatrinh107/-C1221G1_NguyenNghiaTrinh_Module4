@@ -104,8 +104,18 @@ public class ContractDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         ContractDto contractDto = (ContractDto) target;
-        if (LocalDate.parse(contractDto.getContractStartDay()).isBefore(LocalDate.now())) {
+        if("".equals(contractDto.getContractStartDay())) {
+            errors.rejectValue("contractStartDay", "date.null", "nilnon");
+        }else
+            if (LocalDate.parse(contractDto.getContractStartDay()).isBefore(LocalDate.now())) {
             errors.rejectValue("contractStartDay", "date.start", "Nonnn");
+        }
+
+        if("".equals(contractDto.getContractEndDay())) {
+            errors.rejectValue("contractEndDay", "date.null", "nilnon1");
+        }else
+        if("".equals(contractDto.getContractStartDay())) {
+
         }else
         if (LocalDate.parse(contractDto.getContractEndDay()).isBefore(LocalDate.parse(contractDto.getContractStartDay()))) {
             errors.rejectValue("contractEndDay", "date.end", "nonnn");

@@ -1,11 +1,13 @@
 package com.codegym.controller;
 
 import com.codegym.dto.CustomerDto;
+import com.codegym.dto.IInHouseGuestsDto;
 import com.codegym.model.customer.Customer;
 import com.codegym.service.customer.ICustomerService;
 import com.codegym.service.customer.ICustomerTypeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -55,6 +57,7 @@ public class CustomerController {
     @PostMapping(value = "/create")
     public String createCustomer(Model model, @ModelAttribute @Validated CustomerDto customerDto,
                                  BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+        customerDto.setCustomers(this.iCustomerService.findAll());
         new CustomerDto().validate(customerDto,bindingResult);
         if (bindingResult.hasFieldErrors()) {
             model.addAttribute("types", this.iCustomerTypeService.findAll());
@@ -97,6 +100,11 @@ public class CustomerController {
         redirectAttributes.addFlashAttribute("message", "Delete OK!");
         return "redirect:/customer/list";
     }
-
+    @GetMapping("/facility")
+    public String goListInHouseGuests(Model model, @PageableDefault(value = 2, sort = {}) Pageable pageable){
+        Page<IInHouseGuestsDto> iInHouseGuestsDto = this.iCustomerService.findAllCustomerHaveBooking(pageable);
+        model.addAttribute("inHouseGuests", iInHouseGuestsDto);
+        return "/customer/listInHouseGuests";
+    }
 }
 

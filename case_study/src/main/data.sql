@@ -75,3 +75,18 @@ values
 (1,3,1),
 (1,2,2),
 (12,2,2);
+
+
+use case_study;
+select c.customer_name customerName,
+       f.facility_name facilityName,
+       c2.contract_start_day startDay,
+       c2.contract_end_day endDay,
+       GROUP_CONCAT(a.name_attach_service) attachService,
+        SUM(coalesce(cd.quantity * a.cost_attach_service,0))+ f.facility_cost total
+       from customer c
+inner join contract c2 on c.customer_id = c2.customer_id
+inner join facility f on c2.facility_id = f.facility_id
+left join contract_detail cd on c2.contract_id = cd.contract_id
+left join attach_service a on cd.attach_service_id = a.attach_service_id
+group by c2.contract_id;

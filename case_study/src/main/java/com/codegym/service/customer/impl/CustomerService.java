@@ -1,5 +1,6 @@
 package com.codegym.service.customer.impl;
 
+import com.codegym.dto.IInHouseGuestsDto;
 import com.codegym.model.customer.Customer;
 import com.codegym.repository.customer.ICustomerRepository;
 import com.codegym.service.customer.ICustomerService;
@@ -41,6 +42,11 @@ private Customer customer;
     @Override
     public List<Customer> findAll() {
         return iCustomerRepository.findAll();
+    }
+
+    @Override
+    public Page<IInHouseGuestsDto> findAllCustomerHaveBooking(Pageable pageable) {
+        return iCustomerRepository.findAllCustomerHaveBooking(pageable);
     }
 
 
